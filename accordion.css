@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.acoordion {
+  padding: 16px;
+}
+.acoordion-container {
+  padding: 0 18px;
+}
+.acoordion-container_btn {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: none;
+  border: none;
+  background-color: #857d7d;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 18px;
+  color: #fff;
+  outline: none;
+}
+.acoordion-container_btn::after {
+  /*content: "\2212"; signo de -*/
+  content: "\002B"; /*signo de +*/
+  float: right;
+  color: #fff;
+  font-size: 19px;
+}
+.acoordion-container_btn:hover:not(.active) {
+  background-color: #4b3838;
+}
+/*cuando este activo cambiar el seudo elemento por el menos*/
+.active::after {
+  content: "\2212";
+}
+.active {
+  background-color: #5a5555;
+}
+.acoordion-container_panel {
+  display: none;
+  padding: 8px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  background-color: #f7efef;
+}
+.acoordion-container_panel::first-letter {
+  font-size: 16px;
+}
